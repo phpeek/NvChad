@@ -34,6 +34,19 @@ local plugins = {
         "json"
       }
     }
+  },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- defaults
+        "lua-language-server",
+
+        -- go
+        "gopls",
+      }
+    }
   }
 }
 
