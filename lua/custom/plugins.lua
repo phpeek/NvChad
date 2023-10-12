@@ -1,10 +1,11 @@
 local plugins = {
-  { "ThePrimeagen/vim-be-good" , cmd = "VimBeGood" },
+  { "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
 
   -- git integration
   { "tpope/vim-fugitive", lazy = false },
 
-  { "nvim-treesitter/nvim-treesitter",
+  {
+    "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         -- defaults
@@ -31,9 +32,9 @@ local plugins = {
         "javascript",
         "typescript",
         "tsx",
-        "json"
-      }
-    }
+        "json",
+      },
+    },
   },
 
   {
@@ -45,9 +46,20 @@ local plugins = {
 
         -- go
         "gopls",
-      }
-    }
-  }
+
+        -- formatters
+        "stylua",
+      },
+    },
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "custom.configs.conform"
+    end,
+  },
 }
 
 return plugins
