@@ -33,6 +33,7 @@ local plugins = {
         "typescript",
         "tsx",
         "json",
+        "graphql",
       },
     },
   },
