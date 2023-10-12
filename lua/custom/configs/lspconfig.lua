@@ -6,7 +6,7 @@ local lspconfig = require "lspconfig"
 local servers = { "gopls" }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp] = {
+  lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
   }
