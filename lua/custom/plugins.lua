@@ -34,6 +34,7 @@ local plugins = {
         "tsx",
         "json",
         "graphql",
+        "yaml",
       },
     },
   },
