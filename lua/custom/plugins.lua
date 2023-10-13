@@ -48,6 +48,9 @@ local plugins = {
         -- go
         "gopls",
 
+        -- yaml
+        "yaml-language-server",
+
         -- formatters
         "stylua",
       },
